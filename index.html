@@ -1,0 +1,24 @@
+<button class="remove">Remove Item 1</button>
+<button id="add">Add New Item</button>
+
+<script>
+function removeItem(event) {
+event.target.remove();
+console.log ("Remove")
+}
+
+document.addEventListener("click", function(event) {
+  if (event.target.matches(".remove")) {
+    removeItem(event);
+  }
+});
+
+document.querySelector("#add").addEventListener("click", function() {
+let button = document.createElement("button");
+
+button.className = "remove";
+button.textContent = "Remove New Item";
+
+document.body.appendChild(button);
+});
+</script>
